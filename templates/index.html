@@ -86,7 +86,11 @@
 </section>
 
 <section class="personalize-panel" id="personalize">
-  <div class="personalize-copy"><div class="eyebrow">YOUR TASTE, YOUR RULES</div><h2>Make it feel<br><span class="gradient-text">more you.</span></h2><p>Pick a few interests and set a budget. NOVA will find products that fit your vibe.</p><div class="personalize-note"><span>✦</span> Simple, transparent recommendations — no mystery.</div></div>
+  <div class="personalize-copy"><img
+   src="{{ url_for('static', filename='nova-character.jpg') }}"
+    alt="NOVA character"
+    class="personalize-character"
+><div class="eyebrow">YOUR TASTE, YOUR RULES</div><h2>Make it feel<br><span class="gradient-text">more you.</span></h2><p>Pick a few interests and set a budget. NOVA will find products that fit your vibe.</p><div class="personalize-note"><span>✦</span> Simple, transparent recommendations — no mystery.</div></div>
   <form method="post" class="preference-form">
     <label class="form-label">What are you into?</label>
     <div class="interest-chips">
