@@ -14,14 +14,46 @@
     </form>
     <div class="hero-meta"><span>✦ Curated for you</span><span>◈ 4 categories</span><span>↗ Made to discover</span></div>
   </div>
-  <div class="hero-art">
-    <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
-    <div class="hero-glow"></div>
-    <div class="floating-card card-top"><span class="mini-icon">✦</span><div><b>Made for your vibe</b><small>Personalized picks</small></div></div>
-    <div class="hero-product"><div class="hero-product-shine"></div><span class="hero-emoji">🎧</span><div class="hero-product-label"><span>FEATURED FIND</span><b>AeroBeat Pro</b><small>Sound, reimagined.</small></div></div>
-    <div class="floating-card card-bottom"><span class="rating-star">★</span><div><b>4.7 / 5</b><small>Loved by listeners</small></div></div>
-    <div class="spark spark-one">✦</div><div class="spark spark-two">✧</div>
-  </div>
+  <div class="hero-art tunnel-hero" id="nova-tunnel">
+    <div class="tunnel-glow"></div>
+    <div class="tunnel-ring ring-one"></div>
+    <div class="tunnel-ring ring-two"></div>
+
+    <div class="tunnel-center">
+        <span class="tunnel-label">NOVA COLLECTION</span>
+        <h2>DISCOVER<br>YOUR NEXT.</h2>
+        <p>Scroll to explore</p>
+        <span class="tunnel-arrow">↓</span>
+    </div>
+
+    <div class="tunnel-card tunnel-card-one">
+        <img class="tunnel-product-image"
+     src="{{ url_for('static', filename='headphone.jpg') }}"
+     alt="Wireless headphones">
+      
+    </div>
+
+    <div class="tunnel-card tunnel-card-two">
+        <img class="tunnel-product-image"
+     src="{{ url_for('static', filename='watch.jpg') }}"
+     alt="Watch">
+       
+    </div>
+
+    <div class="tunnel-card tunnel-card-three">
+        <img class="tunnel-product-image"
+     src="{{ url_for('static', filename='sneaker.jpg') }}"
+     alt="Sneakers">
+      
+    </div>
+
+    <div class="tunnel-card tunnel-card-four">
+        <img class="tunnel-product-image"
+     src="{{ url_for('static', filename='camera.jpg') }}"
+     alt="Camera">
+       
+    </div>
+</div>
 </section>
 
 <section class="stats-strip">
