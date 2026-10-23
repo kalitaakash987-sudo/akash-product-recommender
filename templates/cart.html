@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Your Bag — NOVA{% endblock %}
+{% block content %}
+<div class="cart-page"><div class="eyebrow">YOUR LITTLE COLLECTION</div><h1>Your bag<span class="gradient-text">.</span></h1><p class="cart-intro">Everything you're thinking about bringing home.</p>
+{% if items %}
+<div class="cart-layout"><div class="cart-items">{% for p in items %}<div class="cart-item"><div class="cart-item-visual visual-{{ p.color }}">{{ p.emoji }}</div><div class="cart-item-info"><small>{{ p.category }} · {{ p.subcategory }}</small><b>{{ p.name }}</b><span>₹{{ "{:,}".format(p.price) }}</span></div><form action="{{ url_for('remove_from_cart', index=loop.index0) }}" method="post"><button class="remove-btn" title="Remove item">×</button></form></div>{% endfor %}</div><aside class="cart-summary"><span>ORDER SUMMARY</span><div><small>Items</small><b>{{ items|length }}</b></div><div><small>Subtotal</small><b>₹{{ "{:,}".format(total) }}</b></div><div><small>Delivery</small><b class="free">FREE</b></div><hr><div class="total-line"><span>Total</span><strong>₹{{ "{:,}".format(total) }}</strong></div><p class="demo-note">Demo checkout only — no payment is collected.</p><a href="{{ url_for('index') }}#discover" class="primary-button full-button">Keep exploring ↗</a></aside></div>
+{% else %}<div class="empty-state cart-empty"><span>✧</span><h3>Your bag is taking a little nap.</h3><p>Add a few things you love and they'll show up here.</p><a href="{{ url_for('index') }}#discover" class="primary-button">Explore products ↗</a></div>{% endif %}
+</div>
+{% endblock %}

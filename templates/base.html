@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090f">
+  <title>{% block title %}NOVA — Find your next favorite{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <nav class="navbar wrap">
+    <a class="brand" href="{{ url_for('index') }}"><span class="brand-mark">N</span><span>NOVA<span class="brand-dot">.</span></span></a>
+    <div class="nav-links">
+      <a href="{{ url_for('index') }}#discover">Discover</a>
+      <a href="{{ url_for('index') }}#recommend">For you</a>
+    </div>
+    <div class="nav-actions">
+      <a class="icon-link" href="{{ url_for('cart') }}" aria-label="Shopping bag">Bag <span class="count">{{ cart_count }}</span></a>
+      <a class="avatar" href="{{ url_for('index') }}#recommend" title="Personalize recommendations">✦</a>
+    </div>
+  </nav>
+  <main class="wrap page-content">{% block content %}{% endblock %}</main>
+  <footer class="footer wrap">
+    <a class="brand small-brand" href="{{ url_for('index') }}"><span class="brand-mark">N</span><span>NOVA<span class="brand-dot">.</span></span></a>
+    <span>Thoughtful finds. Better choices.</span>
+    <span class="footer-note">College project · Flask + Python</span>
+  </footer>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
